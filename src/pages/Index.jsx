@@ -1,4 +1,4 @@
-import { Container, VStack, Select, Button, Text, Box, Heading, SimpleGrid, Radio, RadioGroup, Stack } from "@chakra-ui/react";
+import { Container, VStack, Select, Button, Text, Box, Heading, SimpleGrid, Radio, RadioGroup, Stack, Input } from "@chakra-ui/react";
 import { FaCloudUploadAlt } from "react-icons/fa";
 
 const Index = () => {
