@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <Container maxW="container.xl" py={8} bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
       <Hero />
-      <VStack spacing={6} mt={10}>
+      <VStack spacing={6} mt={4}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} width="full">
           <Box>
             <Text mb={2}>Choose LLM Provider:</Text>

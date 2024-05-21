@@ -4,7 +4,7 @@ const Hero = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box as="section" pt={40} pb={20} textAlign="center" bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
+    <Box as="section" pt={20} pb={20} textAlign="center" bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
       <Heading fontSize={{ base: "3xl", md: "5xl" }} bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
         Welcome to NoteTaking App
       </Heading>
