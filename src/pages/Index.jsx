@@ -1,14 +1,18 @@
-import { Container, VStack, Select, Button, Text, Box, Heading, SimpleGrid, Radio, RadioGroup, Stack } from "@chakra-ui/react";
+import { Container, VStack, Select, Button, Text, Box, Heading, SimpleGrid, Radio, RadioGroup, Stack, useColorMode } from "@chakra-ui/react";
 import { FaCloudUploadAlt } from "react-icons/fa";
 
 const Index = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <Container maxW="container.xl" py={8}>
+    <Container maxW="container.xl" py={8} bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
       <VStack spacing={6}>
-        <Heading>NoteTaking App</Heading>
+        <Heading bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
+          NoteTaking App
+        </Heading>
         <Text>Select your LLM and input preferences for note summarization.</Text>
 
-        <SimpleGrid columns={2} spacing={10} width="full">
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} width="full">
           <Box>
             <Text mb={2}>Choose LLM Provider:</Text>
             <Select placeholder="Select provider">
@@ -54,21 +58,21 @@ const Index = () => {
           </RadioGroup>
         </Box>
 
-        <Box width="full" p={4} borderWidth="1px" borderRadius="lg">
+        <Box width="full" p={4} borderWidth="1px" borderRadius="lg" bg={colorMode === "dark" ? "gray.700" : "white"}>
           <Heading size="md" mb={2}>
             Summary
           </Heading>
           <Text>No data yet...</Text>
         </Box>
 
-        <Box width="full" p={4} borderWidth="1px" borderRadius="lg">
+        <Box width="full" p={4} borderWidth="1px" borderRadius="lg" bg={colorMode === "dark" ? "gray.700" : "white"}>
           <Heading size="md" mb={2}>
             Sentiment Analysis
           </Heading>
           <Text>No data yet...</Text>
         </Box>
 
-        <Box width="full" p={4} borderWidth="1px" borderRadius="lg">
+        <Box width="full" p={4} borderWidth="1px" borderRadius="lg" bg={colorMode === "dark" ? "gray.700" : "white"}>
           <Heading size="md" mb={2}>
             Tags
           </Heading>

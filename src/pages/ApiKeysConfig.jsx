@@ -1,8 +1,10 @@
-import { Box, Button, FormControl, FormLabel, Input, VStack } from "@chakra-ui/react";
+import { Box, Button, FormControl, FormLabel, Input, VStack, useColorMode } from "@chakra-ui/react";
 
 function ApiKeysConfig() {
+  const { colorMode } = useColorMode();
+
   return (
-    <Box p={4}>
+    <Box p={4} bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
       <VStack spacing={4} align="stretch">
         <FormControl id="ollama-endpoint">
           <FormLabel>Ollama Endpoint</FormLabel>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Input, Select, Text } from "@chakra-ui/react";
+import { Box, Button, Input, Select, Text, useColorMode } from "@chakra-ui/react";
 
 function RssFeedConfig() {
   const [rssUrl, setRssUrl] = useState("");
@@ -10,8 +10,10 @@ function RssFeedConfig() {
     console.log("Summary Interval:", interval);
   };
 
+  const { colorMode } = useColorMode();
+
   return (
-    <Box p={4} ml="200px">
+    <Box p={4} ml="200px" bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
       <Text fontSize="xl" mb={4}>
         Configure RSS Feed
       </Text>

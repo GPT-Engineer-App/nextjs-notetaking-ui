@@ -11,12 +11,26 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors,
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: props.colorMode === "dark" ? "gray.800" : "white",
+        color: props.colorMode === "dark" ? "white" : "gray.800",
+      },
+    }),
+  },
+  config: {
+    initialColorMode: "light",
+    useSystemColorMode: true,
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
