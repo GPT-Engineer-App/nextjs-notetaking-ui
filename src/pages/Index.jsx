@@ -9,26 +9,15 @@ const Index = () => {
     <Container maxW="container.xl" py={8} bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
       <Hero />
       <VStack spacing={6} mt={4}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} width="full">
-          <Box>
-            <Text mb={2}>Choose LLM Provider:</Text>
-            <Select placeholder="Select provider">
-              <option value="openai">OpenAI</option>
-              <option value="claude">Claude</option>
-              <option value="ollama">Ollama</option>
-              <option value="lm-studio">LM Studio</option>
-            </Select>
-          </Box>
-          <Box>
-            <Text mb={2}>Actions:</Text>
-            <Button leftIcon={<FaCloudUploadAlt />} colorScheme="teal" variant="solid">
-              Record
-            </Button>
-            <Button leftIcon={<FaCloudUploadAlt />} colorScheme="teal" variant="solid" ml={4}>
-              Upload Audio File
-            </Button>
-          </Box>
-        </SimpleGrid>
+        <Box>
+          <Text mb={2}>Actions:</Text>
+          <Button leftIcon={<FaCloudUploadAlt />} colorScheme="teal" variant="solid">
+            Record
+          </Button>
+          <Button leftIcon={<FaCloudUploadAlt />} colorScheme="teal" variant="solid" ml={4}>
+            Upload Audio File
+          </Button>
+        </Box>
 
         <Box width="full">
           <Text mb={2}>Note Type:</Text>
