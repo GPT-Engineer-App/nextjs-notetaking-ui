@@ -1,4 +1,5 @@
 import { Container, VStack, Select, Button, Text, Box, Heading, SimpleGrid, Radio, RadioGroup, Stack, useColorMode } from "@chakra-ui/react";
+import Hero from "../components/Hero";
 import { FaCloudUploadAlt } from "react-icons/fa";
 
 const Index = () => {
@@ -6,7 +7,8 @@ const Index = () => {
 
   return (
     <Container maxW="container.xl" py={8} bgGradient={colorMode === "dark" ? "linear(to-r, gray.800, gray.900)" : "linear(to-r, white, gray.100)"}>
-      <VStack spacing={6}>
+      <Hero />
+      <VStack spacing={6} mt={10}>
         <Heading bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
           NoteTaking App
         </Heading>
