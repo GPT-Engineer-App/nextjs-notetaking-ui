@@ -11,7 +11,7 @@ function RssFeedConfig() {
   };
 
   return (
-    <Box p={4}>
+    <Box p={4} ml="200px">
       <Text fontSize="xl" mb={4}>
         Configure RSS Feed
       </Text>
